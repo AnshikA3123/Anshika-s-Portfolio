@@ -175,7 +175,7 @@ const CONFIG = {
       tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB'],
       category: 'desktop',
       liveUrl: window.location.origin,
-      githubUrl: '#',
+      githubUrl: 'https://github.com/AnshikA3123/Anshika-s-Portfolio',
     },
   ],
 }
