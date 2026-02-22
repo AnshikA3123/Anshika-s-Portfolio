@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshika Tomar - Software Engineer | AI Enthusiast | Portfolio</title>
+    <meta name="description" content="Anshika Tomar - Software Engineer specializing in AI/ML and Web Development. Explore my projects, skills, and get in touch.">
+    <meta name="keywords" content="Anshika Tomar, Software Engineer, AI, Machine Learning, Web Developer, Portfolio">
+    <meta name="author" content="Anshika Tomar">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Anshika Tomar - Software Engineer Portfolio">
+    <meta property="og:description" content="Software Engineer specializing in AI/ML and Web Development. Explore my projects and get in touch.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67e8c5a8b85d1d23576ab0b3_image-removebg-preview%20(1).png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/img/webclip.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="enhancements.css" rel="stylesheet" type="text/css">
+</head>
+<body class="body">
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap"><div class="loader-line"></div></div>
+                <div class="loader-line-wrap"><div class="loader-line"></div></div>
+                <div class="loader-line-wrap"><div class="loader-line"></div></div>
+                <div class="loader-line-wrap"><div class="loader-line"></div></div>
+                <div class="loader-line-wrap"><div class="loader-line"></div></div>
+            </div>
+        </div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- Theme Toggle (Dark/Light Mode) -->
+   
+        
+    </button>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-animation"></div>
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <div class="hero">
+        <nav class="nav" id="navbar">
+            <div class="nav-inner">
+                <div class="nav-logo-wrap">
+                    <a href="#" class="brand w-nav-brand">
+                        <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67e8c5a8b85d1d23576ab0b3_image-removebg-preview%20(1).png" width="120" alt="Anshika Tomar Logo">
+                    </a>
+                </div>
+                <div class="nav-menu-wrap">
+                    <button class="menu-button" id="menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </nav>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section center">
+        <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67e8162ba3aa62e0550fb4b6_arrow.svg" alt="Scroll Down" class="scroll-arrow">
+        
+        <div class="hero-content">
+            <h1 class="heading-3">
+                <span class="text-span-2 fade-in-up"><em class="italic-text">I am</em></span>
+                <span class="text-span fade-in-up delay-1">
+                    <em class="italic-text-4 typewriter" id="typewriter-text"></em>
+                </span>
+            </h1>
+            <h3 class="hero-subhead fade-in-up delay-2">
+                I'm a software engineer with a passion for building intelligent and efficient solutions. 
+                With a specialization in Artificial Intelligence and Machine Learning, I explore the 
+                intersection of AI and web development, creating projects that blend innovation with functionality.
+            </h3>
+            <a href="#about" class="button pulse-btn fade-in-up delay-3">MORE ABOUT ME</a>
+        </div>
+        
+        <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67ea9885016b62aa474967f9_ChatGPT_Image_Mar_31__2025__06_55_36_PM-removebg-preview.png" 
+             alt="Profile" class="hero-image floating">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section wide img">
+        <div class="title slide-in-left">About me</div>
+        <div class="wrap">
+            <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67eaaaaf32293fe0b702512e_ChatGPT_Image_Mar_31__2025__08_14_32_PM-removebg-preview.png" 
+                 alt="About Image" class="image-6 zoom-in">
+            <h2 class="heading-5 slide-in-right">
+                Hi, I'm Anshika Tomar, B.Tech student with a passion for technology and innovation. 
+                As a software engineer and web developer, I love turning ideas into functional and user-friendly 
+                digital experiences. With a specialization in Artificial Intelligence and Machine Learning (AI & ML), 
+                I'm constantly exploring how intelligent systems can enhance problem-solving and efficiency. 
+                From building dynamic web applications to working on AI-driven projects, I enjoy blending creativity 
+                with logic to develop impactful solutions. When I'm not coding, I'm usually learning about the latest 
+                tech trends, experimenting with new tools, or brainstorming my next project. I believe in continuous 
+                learning and enjoy collaborating with like-minded individuals to push the boundaries of what technology can achieve.
+                <div class="resume-button-wrapper">
+                    <a href="assests/Anshika TOMAR Resume.pdf.pdf" 
+                       download 
+                       class="resume-btn-fancy">
+                       
+                       <span>Download Resume</span>
+                       <svg class="resume-icon" xmlns="http://www.w3.org/2000/svg" 
+                            width="18" height="18" fill="currentColor" 
+                            viewBox="0 0 16 16">
+                         <path d="M.5 9.9a.5.5 0 0 1 .5-.5h4V1.5a.5.5 0 0 1 1 0v7.9h4a.5.5 0 0 1 .35.85l-4.5 4.5a.5.5 0 0 1-.7 0l-4.5-4.5a.5.5 0 0 1-.15-.35z"/>
+                       </svg>
+                  
+                    </a>
+                  </div>
+            
+            </h2>
+
+            
+              </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="title slide-in-up">MY SKILLS</div>
+        <div class="feature-wrap">
+            <div class="skills-container" id="skills-container">
+                <!-- Skills populated by JS - grouped into Frontend, Backend, Database, Tools -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section wide purple">
+        <div class="project-header">
+            <div class="text-block-43 _4 _0 o slide-in-up">MY PROJECTS</div>
+            <div class="project-subtitle slide-in-up delay-1">
+                
+                <strong>Explore some of my recent work combining AI and web development.</strong>
+            </div>
+            <!-- Project Filter Buttons -->
+            <div class="project-filters slide-in-up delay-2">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ml">ML</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
+            </div>
+        </div>
+        
+        <div class="projects-container" id="projects-container">
+            <!-- Projects populated by script.js -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section wide">
+        <h2 class="title slide-in-up">CONTACT</h2>
+        <div class="wrap contact-wrap">
+            <div class="contact-info slide-in-left">
+                <p class="paragraph-3">
+                    Let's Connect! <br>
+                    I'm always open to discussing new projects, creative ideas, or potential collaborations. 
+                    Whether it's AI, web development, or something entirely unique — I'm all ears!<br>
+                    Drop me a message, and I'll get back to you as soon as possible. I believe great things 
+                    start with a simple hello.
+                </p>
+                <div class="contact-email">
+                    <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67fa596245aa6489f32937ae_image-removebg-preview%20(3).png" 
+                         alt="Email Icon" class="email-icon">
+                    <h5 class="email-text">anshikatomar891@gmail.com</h5>
+                </div>
+            </div>
+            
+            <div class="contact-form-container slide-in-right">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name*" required class="form-input">
+                        <span class="form-bar"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email*" required class="form-input">
+                        <span class="form-bar"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject*" required class="form-input">
+                        <span class="form-bar"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message*" required class="form-input form-textarea"></textarea>
+                        <span class="form-bar"></span>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Send Message</span>
+                        <div class="button-loader"></div>
+                    </button>
+                </form>
+                <div id="form-success" class="form-message success-message">
+                    <div class="message-icon">✓</div>
+                    <div class="message-text">Thank you! Your message has been sent successfully!</div>
+                </div>
+                <div id="form-error" class="form-message error-message">
+                    <div class="message-icon">✗</div>
+                    <div class="message-text">Oops! Something went wrong. Please try again.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67e8c5a8b85d1d23576ab0b3_image-removebg-preview%20(1).png" 
+                 width="136" alt="Footer Logo" class="footer-logo">
+            <div class="social-links">
+                <a href="mailto:anshikatomar891@gmail.com?subject=Portfolio Inquiry" class="social-link" aria-label="Email">
+                    <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67fa5a7f9128520549b39a12_icons8-new-post-500.png" 
+                         alt="Email" class="social-icon">
+                </a>
+
+                <a href="https://github.com/AnshikA3123" class="social-link" aria-label="GitHub">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" 
+                         alt="Instagram" class="social-icon">
+                </a>
+
+                <a href="https://www.linkedin.com/in/anshika-tomar-b2a36b299/" class="social-link" aria-label="LinkedIn">
+                    <img src="https://cdn.prod.website-files.com/67e8162aa3aa62e0550fb01b/67fa5a7f9128520549b39a18_80810_linkedin-logo-white-png.png" 
+                         alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    
+     
+        
+     
+     
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="project-modal" aria-hidden="true">
+        <div class="project-modal-overlay"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" aria-label="Close modal">&times;</button>
+            <div id="project-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

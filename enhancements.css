@@ -1,0 +1,484 @@
+/**
+ * Portfolio Enhancements CSS
+ * Adds modern UI effects WITHOUT modifying existing style.css
+ * All new styles extend the existing design language
+ */
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR
+   ============================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #fc0a7e, #dd1173);
+  z-index: 10001;
+  transition: width 0.1s ease-out;
+}
+
+/* ============================================
+   THEME TOGGLE (Dark/Light Mode)
+   Uses CSS variables - extends existing colors
+   ============================================ */
+.theme-toggle {
+  position: fixed;
+  top: 90px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(252, 10, 126, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(252, 10, 126, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(252, 10, 126, 0.3);
+}
+
+.theme-icon {
+  font-size: 22px;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+/* Light mode: show sun, hide moon */
+body.light-mode .theme-icon-dark {
+  opacity: 0;
+}
+
+body.light-mode .theme-icon-light {
+  opacity: 1;
+}
+
+/* Dark mode: show moon, hide sun (default) */
+body .theme-icon-dark {
+  opacity: 1;
+}
+
+body .theme-icon-light {
+  opacity: 0;
+}
+
+/* Light mode color overrides - minimal, extends design */
+body.light-mode {
+  background-color: #f5f5f7;
+  color: #1a1a1a;
+}
+
+body.light-mode .section.wide,
+body.light-mode .section.wide.img {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .section.wide.purple {
+  background: rgba(240, 235, 245, 0.9);
+}
+
+body.light-mode .nav-link,
+body.light-mode .skill-name,
+body.light-mode .project-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .paragraph-3,
+body.light-mode .email-text,
+body.light-mode .project-description,
+body.light-mode .heading-5 {
+  color: rgba(26, 26, 26, 0.85);
+}
+
+body.light-mode .project-subtitle {
+  color: #5a2a4a;
+}
+
+body.light-mode .skill-category,
+body.light-mode .project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .form-input {
+  color: #1a1a1a;
+}
+
+body.light-mode .form-input::placeholder {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+body.light-mode .text-block-43._4._0.o {
+  color: #1a1a1a;
+}
+
+/* ============================================
+   PROJECT FILTERS
+   ============================================ */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 2px solid rgba(252, 10, 126, 0.5);
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(252, 10, 126, 0.2);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(45deg, #fc0a7e, #dd1173);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ============================================
+   PROJECT CARD ENHANCEMENTS
+   New layout: vertical cards with buttons
+   ============================================ */
+.projects-container.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card-enhanced {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card-enhanced:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(252, 10, 126, 0.25);
+}
+
+.project-card-enhanced .project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-card-enhanced .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card-enhanced:hover .project-img {
+  transform: scale(1.08);
+}
+
+.project-card-enhanced .project-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-enhanced .project-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.project-card-enhanced .project-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.project-card-actions .btn-demo,
+.project-card-actions .btn-github {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-demo {
+  background: linear-gradient(45deg, #fc0a7e, #dd1173);
+  color: #fff;
+  border: none;
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(252, 10, 126, 0.4);
+}
+
+.btn-github {
+  background: transparent;
+  color: inherit;
+  border: 2px solid rgba(252, 10, 126, 0.6);
+}
+
+.btn-github:hover {
+  background: rgba(252, 10, 126, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Project card filter animation */
+.project-card-enhanced.filter-hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.project-card-enhanced.filter-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: cardReveal 0.5s ease forwards;
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   PROJECT MODAL
+   ============================================ */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.project-modal-content {
+  position: relative;
+  background: rgba(20, 9, 19, 0.98);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 80px rgba(252, 10, 126, 0.2);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.project-modal.active .project-modal-content {
+  transform: scale(1);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.project-modal-close:hover {
+  opacity: 1;
+}
+
+.project-modal-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 20px 0;
+}
+
+.project-modal-features li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.project-modal-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #fc0a7e;
+  font-weight: bold;
+}
+
+/* ============================================
+   SKILL ICONS & REGROUPING
+   ============================================ */
+.skill-category-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+.skill-category-title-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-item:hover .skill-progress {
+  box-shadow: 0 0 20px rgba(252, 10, 126, 0.4);
+}
+
+/* ============================================
+   SECTION REVEAL (subtle parallax feel)
+   ============================================ */
+section.in-view .slide-in-left,
+section.in-view .slide-in-right,
+section.in-view .slide-in-up,
+section.in-view .zoom-in {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* ============================================
+   ENHANCED CARD HOVER (extends existing)
+   ============================================ */
+.skill-category {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(252, 10, 126, 0.2);
+}
+
+/* ============================================
+   BUTTON ENHANCEMENTS
+   ============================================ */
+.button:active,
+.pulse-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   FEATURE-WRAP (missing from original)
+   ============================================ */
+.feature-wrap {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ============================================
+   RESPONSIVE ENHANCEMENTS
+   ============================================ */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 75px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .project-filters {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .projects-container.grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 70px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-card-actions {
+    flex-direction: column;
+  }
+}
